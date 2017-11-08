@@ -1,0 +1,33 @@
+body{
+  font-family: Alegreya;
+  //background-image: url("night-trees-stars.jpg");
+  //background-image: url("rain.jpeg");
+  background-image: url("foggy.jpg");
+  //background-image: url("spring.jpeg");
+  background-image: url("sunset.jpeg");
+  //background-color: #8D230F;
+}
+h1{
+  text-align: center;
+  color: #1E434C;
+}
+p{
+  color: #C99E10;
+  text-align: center;
+}
+#button{
+  background-color: #1E434C;
+  color: #C99E10;
+}
+#container{
+  background-color:#9B4F0F;
+  margin: auto;
+  width: 50%;
+  position: relative;
+  top: 50%;
+  transform: translateY(50%);
+  border-style: solid;
+  border-width: 5px;
+  border-color: black;
+  //border-radius: 10px;
+}
