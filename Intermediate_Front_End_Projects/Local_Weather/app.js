@@ -4,7 +4,6 @@ $(document).ready(function() {
   isC = true;
        if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
-    //$("#data").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
     $.getJSON("https://fcc-weather-api.glitch.me/api/current?lat="+
     position.coords.latitude+"&lon="+position.coords.longitude, function(json){
         //$("#data").html(JSON.stringify(json));
@@ -16,9 +15,25 @@ $(document).ready(function() {
         x.src = json.weather[0].icon;
         var imagePar = document.getElementById("icon");
         imagePar.appendChild(x);
+        $("#toggle-button").removeClass("hidden");
+      //Set temperature icon depending on temperature
+        if(json.main.temp < 0){
+          $("#temp-icon").addClass("fa fa-thermometer-0");
+        }
+        else if(json.main.temp >= 0 && json.main.temp < 12.7){
+          $("#temp-icon").addClass("fa fa-thermometer-1");
+        }
+        else if(json.main.temp >= 12.7 && json.main.temp < 23.8){
+          $("#temp-icon").addClass("fa fa-thermometer-2");
+        }
+        else if(json.main.temp >= 23.8 && json.main.temp < 32.2){
+          $("#temp-icon").addClass("fa fa-thermometer-3");
+        }
+        else{
+          $("#temp-icon").addClass("fa fa-thermometer-4");
+        }
 
-        //setTheme(json.weather[0].main);
-        setTheme("Night");
+        setTheme(json.weather[0].main, json.sys.sunrise > json.sys.sunset);
       });
   });
 }
@@ -32,37 +47,35 @@ function convert(){
     isCelsius = false;
     temp = Math.round( temp * 10) / 10;
     x.innerHTML = "" + temp + " &degF";
+    $("#toggle").removeClass("fa-flip-horizontal");
   }
   else{
     temp = (temp - 32) * 5/9;
     isCelsius = true;
     temp = Math.round( temp * 100) / 100;
     x.innerHTML = "" + temp + " &degC";
+    $("#toggle").addClass("fa-flip-horizontal");
   }
 }
 
-function setTheme(weather){
-  if(weather == "Clouds"){
-    $("div").css("background-color","#C67A43");
-    $("h1").css("color","#0B5293");
-    $("button").css("background-color","#5A4D44");
-    $('body').css('background-image', 'url(' + "clouds.jpeg" + ')');
-    $("#quote").html("&quotThere are no rules of architecture for a castle in the clouds.&quot<br>-Gilbert K. Chesterton");
+function setTheme(weather, night){
+  if(night){
+    $("body").css("background-color", "#1974D2");
+    $("body").css("color", "white");
+  }
+  else if(weather == "Clouds" || weather == "Mist"){
+    $("body").css("background-color", "#ADD8E6");
   }
   else if(weather == "Rain"){
-    $("div").css("background-color","#C67A43");
-    $('body').css('background-image', 'url(' + "rain.jpeg" + ')');
+    $("body").css("background-color", "#D3D3D3");
   }
   else if(weather == "Sun"){
-    $("div").css("background-color","#C67A43");
-    $('body').css('background-image', 'url(' + "spring.jpeg" + ')');
+    $("body").css("background-color", "#FFDF00");
   }
   else if(weather == "Clear"){
-    $("div").css("background-color","#C67A43");
-    $('body').css('background-image', 'url(' + "clear.jpeg" + ')');
+    $("body").css("background-color", "#FFDF00");
+    //$("body").css("background", "linear-gradient(to bottom right, #FFDF00, yellow)");
+    $("#github").css("color", "#0044cc");
   }
-  else if(weather == "Night"){
-    $("div").css("background-color","#C67A43");
-    $('body').css('background-image', 'url(' + "night-trees-stars.jpg" + ')');
-  }
+
 }

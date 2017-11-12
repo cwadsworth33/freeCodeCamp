@@ -1,61 +1,16 @@
 body{
   font-family: Alegreya;
-  //background-color: green;
-  font-size: 130%;
-}
-h1{
-  text-align: center;
-  color: #0960DE;
-}
-p{
-  color: #FDC101;
-  text-align: center;
-  opacity: 1;
-}
-#button{
-  background-color: #B878E5;
-  color: #FDC101;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  opacity: 1;
-}
-#container{
-  padding-top: 20px;
-  margin: auto;
-  width: 60%;
-  height: 60vh;
-  opacity: .9;
-  position: relative;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #1E1517;
-  margin-top: 10%;
+  font-size: 250%;
+  margin-left: 22%;
+  margin-right: 22%;
+  margin-top: 40px;
+  transition: background-color 0.5s ease;
 }
 
-.sunset{
-  //background-image: url("sunset.jpeg");
-  //#FDC101 gold
-  //#1E1517 sillouette
-  //#0960DE dark blue
-  //#B878E5 purple
-  //#C67A43 cloud
-  //#FFF6F2 sun
+.footer{
+  font-size: 15px;
 }
-.foggy{
-  background-image: url("foggy.jpg");
-}
-.rain{
-  background-image: url("rain.jpeg");
-  //#B5A260 yellow
-  //#253D47 dark green
-  //#647C49 light green
-  //#9FADAD rain grey
-  //#B49A81 peach
-}
-.night{
-  background-image: url("night-trees-stars.jpg");
-}
-.sun{
-  background-image: url("spring.jpeg");
+
+.hidden{
+  visibility: hidden;
 }
