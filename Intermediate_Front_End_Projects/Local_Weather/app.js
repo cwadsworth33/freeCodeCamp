@@ -33,7 +33,13 @@ $(document).ready(function() {
           $("#temp-icon").addClass("fa fa-thermometer-4");
         }
 
-        setTheme(json.weather[0].main, json.sys.sunrise > json.sys.sunset);
+      var sunsetDate = new Date(json.sys.sunset*1000);
+      var currentDate = new Date();
+      var isNight = (currentDate.getHours() > sunsetDate.getHours() ||
+      (currentDate.getHours() == sunsetDate.getHours && currentDate.getMinutes()
+      > sunsetDate.getMinutes()));
+
+      setTheme(json.weather[0].main, isNight);
       });
   });
 }
@@ -62,6 +68,7 @@ function setTheme(weather, night){
   if(night){
     $("body").css("background-color", "#1974D2");
     $("body").css("color", "white");
+    $("#github").css("color", "white");
   }
   else if(weather == "Clouds" || weather == "Mist"){
     $("body").css("background-color", "#ADD8E6");
