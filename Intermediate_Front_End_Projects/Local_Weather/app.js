@@ -9,7 +9,8 @@ $(document).ready(function() {
         //$("#data").html(JSON.stringify(json));
         $("#location").html(json.name + ", "+json.sys.country);
         $("#temp").html(json.main.temp + " &degC");
-        $("#clouds").html(json.weather[0].main + " ("+json.weather[0].description+")");
+        $("#clouds").html(json.weather[0].main +
+          " ("+json.weather[0].description+")");
         console.log(json);
         var x = document.createElement("IMG");
         x.src = json.weather[0].icon;
@@ -34,12 +35,23 @@ $(document).ready(function() {
         }
 
       var sunsetDate = new Date(json.sys.sunset*1000);
+      var sunriseDate = new Date(json.sys.sunrise*1000);
       var currentDate = new Date();
-      var isNight = (currentDate.getHours() > sunsetDate.getHours() ||
-      (currentDate.getHours() == sunsetDate.getHours && currentDate.getMinutes()
-      > sunsetDate.getMinutes()));
 
-      setTheme(json.weather[0].main, isNight);
+      var isEarly = currentDate.getHours() < 12;
+      var isLate = currentDate.getHours() >= 12;
+      var isNight = false;
+      if(isLate){
+        isNight = (currentDate.getHours() > sunsetDate.getHours()) ||
+        (currentDate.getHours() == sunsetDate.getHours() &&
+        currentDate.getMinutes() > sunsetDate.getMinutes());
+      }
+      if(isEarly){
+        isNight = (currentDate.getHours() < sunriseDate.getHours()) ||
+        (currentDate.getHours() == sunriseDate.getHours() &&
+        currentDate.getMinutes() < sunriseDate.getMinutes());
+      }
+        setTheme(json.weather[0].main, isNight);
       });
   });
 }
