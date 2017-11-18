@@ -15,6 +15,9 @@
   <link rel="stylesheet" href="theme.css">
 </head>
 <body>
+  <div class="container">
+    <div id=background style="background-img:
+    linear-gradient(to bottom left, rgba(255, 223, 0, 1), rgba(255, 223, 0, 0));"></div>
   <div class="row">
  <h1 class="col-md-12"><i class="fa fa-free-code-camp"></i>
    freeCodeCamp Local Weather App</h1>
@@ -27,7 +30,7 @@
   <div class="row">
    <div id="temp" class="col-md-3"></div>
    <div class="col-md-3"><i id="temp-icon"></i></div>
-   <button id="toggle-button" class="col-md-6 btn btn-block btn-primary hidden"
+   <button id="toggle-button" class="col-md-6 btn btn-primary hidden btn-sm"
    onclick="convert()">&degC <i class="fa fa-adjust fa-flip-horizontal"
    aria-hidden="true" id="toggle"></i> &degF</button>
   </div>
@@ -35,11 +38,10 @@
    <div id="clouds" class="col-md-6"></div>
    <div id="icon" class="col-md-6 text-center"></div>
   </div>
- </div>
-</div>
 <hr>
 <div class="footer text-center">Created by <a href="https://github.com/cwadsworth33"
   id="github">Christian Wadsworth</a></div>
+</div>
   <script src="app.js"></script>
 </body>
 </html>

@@ -92,9 +92,9 @@ function setTheme(weather, night){
     $("body").css("background-color", "#FFDF00");
   }
   else if(weather == "Clear"){
-    $("body").css("background-color", "#FFDF00");
-    //$("body").css("background", "linear-gradient(to bottom right, #FFDF00, yellow)");
-    $("#github").css("color", "#0044cc");
+    //$("body").css("background-color", "#FFDF00");
+    $("body").css("background", "linear-gradient(to bottom left, yellow, #FFDF00)");
+    //$("#github").css("color", "#008000");
   }
 
 }

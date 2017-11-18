@@ -1,0 +1,27 @@
+body{
+  margin-top: 40px;
+  background-color: #43464B;
+  font-family: helevetica;
+}
+
+h1{
+  color: white;
+}
+
+.cursive{
+  font-family: 'Bad Script', cursive;
+  font-size: 24px;
+}
+
+#parchment{
+  background-color: #F1F1D4;
+  width: 75%;
+  margin: auto;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+div{
+  margin: 10px;
+  padding: 10px;
+}
