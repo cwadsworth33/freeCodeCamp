@@ -1,0 +1,99 @@
+body{
+  background-color: #43464B;
+  color: white;
+  font-family: arial, helvetica, times;
+}
+
+#clock{
+  color: #00BFFF;
+}
+
+#isBreak{
+  text-align: center;
+  color: #DC143C;
+  display: inline-block;
+  background-color: inherit;
+  padding: 10px;
+  border-radius: 10px;
+  //border: 1px solid white;
+}
+
+#header{
+  height: 75px;
+  text-align: center;
+  padding: 5px;
+  color: white;
+}
+
+#controls{
+  max-width: 250px;
+  height: 100px;
+  margin: auto;
+}
+
+#controls-1{
+  float: left;
+  text-align: center;
+}
+
+#controls-2{
+  float: right;
+  text-align: center;
+}
+
+button.length{
+  background-color: #43464B;
+  color: white;
+  border: 0px;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+#mid{
+  text-align: center;
+}
+
+#footer{
+  text-align: center;
+}
+
+#play{
+  margin: 10px;
+  border: 1px solid white;
+  padding: 5px;
+}
+
+#bar{
+  border: 1px solid white;
+  max-width: 350px;
+  margin: auto;
+  border-radius: 40px;
+  height: 40px;
+  margin-top: 20px;
+  overflow: hidden;
+  text-align: center;
+}
+
+#bar:hover{
+  cursor: pointer;
+}
+
+#progress{
+  width: 0%;
+  height: 40px;
+  background-color: #DC143C;
+}
+
+#container{
+  max-width: 500px;
+  margin: auto;
+  background-color: #9F8170;
+  padding-bottom: 30px;
+  border-radius: 100px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 30px;
+  border: 1px solid black;
+}

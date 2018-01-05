@@ -1,0 +1,70 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Quotes</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap-grid.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!--Color scheme is a combination of Berry Blues and Polished
+and Inviting from https://www.canva.com/learn/100-color-combinations/-->
+
+<!--Header-->
+<div id="header" class="text-center">
+  <h1>Wikipedia Explorer</h1>
+  <hr>
+</div>
+<!--End of Header-->
+
+<!--Container for the meat of the document-->
+<div id="container" class="text-center">
+  <!--First box (Wikipedia search)-->
+  <div class="one">
+    <div>
+      <h2 class="icon-label">Search Wikipedia</h2>
+    </div>
+    <div id="search-icon-container">
+<i onclick="searchBar()" class="fa fa-search fa-5x align-middle" aria-hidden="true"></i>
+
+      <div class="input-with-icon">
+        <i class="fa fa-compress" aria-hidden="true"></i>
+        <input type="text" name="fname" id="searchBar" class="align-middle">
+      </div>
+
+    </div>
+  </div>
+  <!--End of first box-->
+
+  <!--Second box (Wikipedia Random article)-->
+  <div class="two">
+    <div>
+      <h2 class="icon-label">Random Article</h2>
+    </div>
+  <i class="fa fa-random fa-5x" aria-hidden="true" onclick="getRandom()"></i>
+  </div>
+  <!--End of second box-->
+</div>
+<!--End of container-->
+
+<!--Container for the Search Results-->
+<div id="searchResults"></div>
+
+<!--Footer-->
+<div id="footer" class="text-center">
+  <hr>
+<h5 class="text-center">Created by Christian Wadsworth</h5>
+</div>
+<!--End of footer-->
+
+<script src="app.js"></script>
+</body>
+</html>

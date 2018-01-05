@@ -1,0 +1,108 @@
+body{
+  background-color: #1E1F26;
+  color: #D0E1F9;
+  margin-top: 40px;
+  font-family: 'Helevetica';
+}
+
+a {
+  color: inherit;
+}
+
+#header{
+  margin: 10px;
+  width: 90%;
+  margin: auto;
+}
+
+.one {
+    width: 48%;
+    height: 200px;
+    border: 3px solid white;
+    float: left;
+    transition: .2s;
+}
+.one:hover {
+  border: 3px solid #E1B80D;
+}
+
+.two {
+    margin-left: 52%;
+    height: 200px;
+    width: 48%;
+    border: 3px solid white;
+    transition: .2s;
+}
+.two:hover {
+  //background: #283655;
+  border: 3px solid #E1B80D;
+}
+
+h1{
+  color: #D0E1F9;
+  //color: #E1B80D;
+}
+
+h4{
+  color: #E1B80D;
+}
+
+input{
+  border-radius: 10px;
+  border: 2px solid #D0E1F9;
+  background-color: #1E1F26;
+  padding-left: 10px;
+  display: none;
+  margin : 0 auto;
+  color: #E1B80D;
+  padding: 5px;
+  transition: .2s;
+  padding-right: 25px;
+}
+
+input:focus{
+  border: 2px solid #E1B80D;
+  box-shadow: 2.5px 2.5px 1.5px E1B80D;
+}
+
+i{
+  cursor: pointer;
+}
+
+i:hover{
+  color: #E1B80D;
+}
+
+#container {
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+}
+
+#searchResults{
+  width: 80%;
+  margin-left: 10%;
+}
+
+.search-div{
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid #1E1F26;
+}
+
+.search-div:hover{
+  border: 2px solid white;
+  color: #4D648D;
+}
+
+#footer{
+  width: 90%;
+  margin: auto;
+}
+
+.fa-compress{
+  position: relative;
+  left: 175px;
+  display: none;
+}

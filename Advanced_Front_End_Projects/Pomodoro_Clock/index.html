@@ -1,0 +1,67 @@
+<!--I do not own the audio used on this page. Audio comes from
+https://notificationsounds.com/notification-sounds/slow-spring-board-570
+and https://notificationsounds.com/notification-sounds/dont-think-so-556
+under Creative Commons licence-->
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pomodoro Clock</title>
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<div id="header">
+  <h1>Pomodoro Clock <i class="fa fa-clock-o" aria-hidden="true" id="clock"></i></h1>
+</div>
+
+<div id="controls">
+  <div id="controls-1">
+    <h4>Break Length</h4>
+    <button onclick="decBreakLength()" class="length">-</button>
+    <span id="breakLength">5</span>
+    <button onclick="incBreakLength()" class="length">+</button>
+  </div>
+
+  <div id="controls-2">
+    <h4>Session Length</h4>
+    <button onclick="decSessionLength()" class="length">-</button>
+    <span id="sessionLength">25</span>
+    <button onclick="incSessionLength()" class="length">+</button>
+  </div>
+</div>
+
+<div id="mid">
+  <button class="length" id="play" onclick="playPause()">
+    <i class="fa fa-play" aria-hidden="true"></i>/
+    <i class="fa fa-pause" aria-hidden="true"></i>
+  </button>
+  <h2 id="isBreak">Session</h2>
+
+  <h1 id="time">25:00</h1>
+</div>
+
+<div id="bar" onclick="playPause()">
+
+  <div id="progress">
+  </div>
+</div>
+
+<audio id="alert">
+  <source src="https://dl.dropboxusercontent.com/s/y3d8jmer06uu8i5/slow-spring-board.mp3?dl=0"
+  type="audio/mpeg">
+</audio>
+
+<audio id="alert1">
+  <source src="https://dl.dropboxusercontent.com/s/e8qmcr9zwg6402x/dont-think-so.mp3?dl=0"
+  type="audio/mpeg">
+</audio>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
