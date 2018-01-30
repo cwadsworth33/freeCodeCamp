@@ -336,23 +336,30 @@ function result(board, move){
 }
 
 function findMove(board){
+  var block = -1;
   var moves = actions(board);
-  for(i=0; i<moves.length; i++){
+  console.log("BEFORE: "+moves);
+  for(var i=0; i<moves.length; i++){
     var newBoard = result(board, moves[i]);
+    console.log("i: "+i);
+    console.log("AFTER: " + moves);
     if(isGameOver(newBoard)){
-      console.log(moves[i]);
+      console.log("WIN: " + moves[i]);
       return moves[i];
     }
     var moves2 = actions(newBoard);
-    for(j=0; j<moves.length; j++){
+    for(var j=0; j<moves.length; j++){
       var newNewBoard = result(newBoard, moves2[j]);
       if(isGameOver(newNewBoard)){
-        console.log(moves2[j]);
-        return moves2[j];
+        console.log("BLOCK: " + moves2[j]);
+        block = moves2[j];
       }
     }
   }
-  console.log(moves[Math.floor(Math.random()*moves.length)]);
+  if(block >= 0){
+    return block;
+  }
+  console.log("RANDOM:"+moves[Math.floor(Math.random()*moves.length)]);
   return moves[Math.floor(Math.random()*moves.length)];
 }
 
