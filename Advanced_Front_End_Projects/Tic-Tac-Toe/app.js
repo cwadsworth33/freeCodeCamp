@@ -338,6 +338,14 @@ function result(board, move){
 function findMove(board){
   var block = -1;
   var moves = actions(board);
+  if(moves.length == 8 && board[4] != "_"){
+    var corners = [0,2,6,8];
+    var move = corners[Math.floor(Math.random()*4)];
+    return move;
+  }
+  else if(moves.length == 8){
+    return 4;
+  }
   for(var i=0; i<moves.length; i++){
     var newBoard = result(board, moves[i]);
     if(isGameOver(newBoard)){
