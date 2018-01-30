@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Christian Wadsworth</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+  </head>
+  <body>
+    <div id="game-board">
+<h1>Tic-Tac-Toe</h1>
+    <div id="turn">
+      <div id="turn-player1">
+        Player 1
+      </div>
+      <div id="turn-player2">
+        Player 2
+      </div>
+    </div>
+<div id="container">
+  <div id="menu">
+    <h3 id="new-game">Start new game</h3>
+    <h4 onclick="one()" id="one-player">1 Player Game</h4>
+    <h4 onclick="two()" id="two-player">2 Player Game</h4>
+    <div id="selectX">
+      <h4 style="float: left;" onclick="X()">X</h4>
+      <h4 style="float: right;" onclick="O()">O</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cell top left" id="0" onclick="play(0)">
+    </div>
+    <div class="cell top" id="1" onclick="play(1)">
+    </div>
+    <div class="cell top right" id="2" onclick="play(2)">
+    </div>
+  </div>
+  <div class="row">
+    <div class="cell left" id="3" onclick="play(3)">
+    </div>
+    <div class="cell" id="4" onclick="play(4)">
+    </div>
+    <div class="cell right" id="5" onclick="play(5)">
+    </div>
+  </div>
+  <div class="row">
+    <div class="cell bottom left" id="6" onclick="play(6)">
+    </div>
+    <div class="cell bottom" id="7" onclick="play(7)">
+    </div>
+    <div class="cell bottom right" id="8" onclick="play(8)">
+    </div>
+  </div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="app.js"></script>
+  </body>
+</html>
