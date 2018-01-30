@@ -5,9 +5,9 @@ var gameSetup = {
   player1: "X",
   player2: "O",
   empty: "_",
-  maximizer: "O",
-  minimizer: "X"
 };
+
+var interval;
 
 //global object containing the game state
 var gameState = {
@@ -20,11 +20,12 @@ var gameState = {
  * One player was selected from the start menu
  */
 function one(){
-  //gameSetup.isTwoPlayer = false;
-  //$("#selectX").show();
-  //$("#one-player").hide();
-  //$("#two-player").hide();
-  //$("#new-game").html("Select X or O");
+  gameSetup.isTwoPlayer = false;
+  interval = setInterval(computerMove, 1000);
+  $("#selectX").show();
+  $("#one-player").hide();
+  $("#two-player").hide();
+  $("#new-game").html("Select X or O");
 }
 
 /*
@@ -87,7 +88,6 @@ function play(index){
       }
       gameState.moves = gameState.moves + 1;
       //game over?
-      console.log(isGameOver(gameState.board));
       if(isGameOver(gameState.board)){
         var hasWon1 = hasWon(gameSetup.player1, gameState.board);
         var hasWon2 = hasWon(gameSetup.player2, gameState.board);
@@ -108,6 +108,7 @@ function play(index){
         $("#turn-player2").show();
         gameState.isP1Turn = true;
         gameSetup.gameStarted = false;
+        clearInterval(interval);
       }
       //game is not over
       else{
@@ -241,7 +242,6 @@ function winningRow(conditions, player){
  * @return true if the game is over, false if not
  */
 function isGameOver(board){
-  console.log(gameState.moves);
   if(hasWon(gameSetup.player1, board).won || hasWon(gameSetup.player2, board).won){
     return true;
   }
@@ -329,12 +329,37 @@ function player1(state){
 * @return the state after a move has occured
 */
 function result(board, move){
-  var newState = board;
+  var newState = board.slice();
   var player = player1(board);
   newState[move] = player;
   return newState;
 }
 
 function findMove(board){
+  var moves = actions(board);
+  for(i=0; i<moves.length; i++){
+    var newBoard = result(board, moves[i]);
+    if(isGameOver(newBoard)){
+      console.log(moves[i]);
+      return moves[i];
+    }
+    var moves2 = actions(newBoard);
+    for(j=0; j<moves.length; j++){
+      var newNewBoard = result(newBoard, moves2[j]);
+      if(isGameOver(newNewBoard)){
+        console.log(moves2[j]);
+        return moves2[j];
+      }
+    }
+  }
+  console.log(moves[Math.floor(Math.random()*moves.length)]);
+  return moves[Math.floor(Math.random()*moves.length)];
+}
 
+function computerMove(){
+  if(!gameState.isP1Turn){
+    var move = findMove(gameState.board);
+    play(move);
+  }
+  console.log(gameState.board);
 }
