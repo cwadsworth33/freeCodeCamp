@@ -338,20 +338,15 @@ function result(board, move){
 function findMove(board){
   var block = -1;
   var moves = actions(board);
-  console.log("BEFORE: "+moves);
   for(var i=0; i<moves.length; i++){
     var newBoard = result(board, moves[i]);
-    console.log("i: "+i);
-    console.log("AFTER: " + moves);
     if(isGameOver(newBoard)){
-      console.log("WIN: " + moves[i]);
       return moves[i];
     }
     var moves2 = actions(newBoard);
     for(var j=0; j<moves.length; j++){
       var newNewBoard = result(newBoard, moves2[j]);
       if(isGameOver(newNewBoard)){
-        console.log("BLOCK: " + moves2[j]);
         block = moves2[j];
       }
     }
@@ -359,7 +354,6 @@ function findMove(board){
   if(block >= 0){
     return block;
   }
-  console.log("RANDOM:"+moves[Math.floor(Math.random()*moves.length)]);
   return moves[Math.floor(Math.random()*moves.length)];
 }
 
@@ -368,5 +362,4 @@ function computerMove(){
     var move = findMove(gameState.board);
     play(move);
   }
-  console.log(gameState.board);
 }
