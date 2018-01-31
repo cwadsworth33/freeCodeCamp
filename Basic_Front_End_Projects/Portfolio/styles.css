@@ -1,5 +1,6 @@
 html, body{
   height: 100%;
+  font-family: helvetica;
 }
 
 *{
@@ -10,30 +11,38 @@ html, body{
 #navbar{
   height: 60px;
   width: 100%;
-  background-color: black;
-  opacity: .5;
+  background-color: rgb(214, 116, 24);
+  opacity: .6;
   position: fixed;
 }
 
 .section1{
-	//background-image: url("https://dl.dropboxusercontent.com/s/obcllptrsnui756/Keys.JPG?dl=0");
-	//background-size: cover;
-	background-color: grey;
-	font-size: 72pt;
+	//background-color: #778899;
+  background-image: url("https://static.pexels.com/photos/220116/pexels-photo-220116.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
 	color: white;
 	display: flex;
 	align-items: center;
-	
+
 }
 
 .fullpage{
   height: 100%;
-  border: 1px solid black;
 }
 
-.divider{
-  height: 50%;
-  background-color: grey;
+.section2{
+  height: 70%;
+  background-color: #014779;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+}
+
+#section3{
+  background-image: url("https://dl.dropboxusercontent.com/s/wcc8lo7kbcdvsr9/coffee_desk.jpg?dl=0");
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 #hello{
@@ -41,7 +50,14 @@ html, body{
 	width: 75%;
 	height: 75%;
 	margin-top: 20px;
-	color: #00FF00;
 	padding: 20px;
 	text-align: center;
+}
+
+#about{
+  width: 50%;
+  float: left;
+  height: 100%;
+  padding: 10px;
+  margin-top: 10px;
 }

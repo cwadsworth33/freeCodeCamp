@@ -338,13 +338,20 @@ function result(board, move){
 function findMove(board){
   var block = -1;
   var moves = actions(board);
+  var corners = [0,2,6,8];
   if(moves.length == 8 && board[4] != "_"){
-    var corners = [0,2,6,8];
     var move = corners[Math.floor(Math.random()*4)];
     return move;
   }
-  else if(moves.length == 8){
-    return 4;
+  if(moves.length == 8){
+    var cornersAndCenter = [];
+    for(var k=0; k<4; k++){
+      if(board[corners[k]] == "_"){
+        cornersAndCenter.push(corners[k]);
+      }
+    }
+    cornersAndCenter.push(4);
+    return cornersAndCenter[Math.floor(Math.random()*4)];
   }
   for(var i=0; i<moves.length; i++){
     var newBoard = result(board, moves[i]);
@@ -368,6 +375,6 @@ function findMove(board){
 function computerMove(){
   if(!gameState.isP1Turn){
     var move = findMove(gameState.board);
-    play(move);
+    play(move, true);
   }
 }
