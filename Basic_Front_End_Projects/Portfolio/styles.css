@@ -27,10 +27,11 @@ h3{
 #profile{
   width: 200px;
   float: right;
-  margin-left: 20px;
+  margin-left: 10px;
+  margin-bottom: 3px;
 }
 
-.section1{
+#section1{
   background-image: url("https://static.pexels.com/photos/220116/pexels-photo-220116.jpeg");
   background-size: cover;
   background-attachment: fixed;
@@ -62,6 +63,27 @@ h3{
   padding: 20px;
   color: white;
   text-align: center;
+}
+
+#section5{
+  background-image: url("https://dl.dropboxusercontent.com/s/v2ydm5ugvclsnyb/hike.jpg?dl=0");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 70%;
+}
+
+#section6{
+  position: relative;
+  min-height: 100%;
+  background-color: rebeccapurple;
+  color: white;
+  text-align: center;
+}
+
+#sec6scroll-container{
+  position: absolute;
+  bottom: 30px;
+  right: 50%;
 }
 
 #about{
