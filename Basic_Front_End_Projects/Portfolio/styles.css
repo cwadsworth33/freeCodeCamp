@@ -7,6 +7,15 @@ a{
   text-decoration: none;
 }
 
+h1{
+  font-family: 'Bree Serif', serif;
+}
+
+h2{
+  font-family: 'Bree Serif', serif;
+  font-size: 24pt;
+}
+
 *{
   border: 0px;
   margin: 0px;
@@ -22,6 +31,25 @@ h3{
   text-align: center;
   bottom: 0;
   width: 100%;
+}
+
+#navbar{
+  //width: 400px;
+  margin: auto;
+  margin-bottom: 80px;
+}
+
+#navbar > span{
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 24px;
+  //font-family: 'Bree Serif', serif;
+  text-decoration: underline;
+}
+
+#navbar :hover{
+  cursor: pointer;
+  color: gold;
 }
 
 #profile{
@@ -97,6 +125,10 @@ h3{
   height: 100%;
 }
 
+i{
+  transition: .3s ease;
+}
+
 i:hover{
   cursor: pointer;
   color: gold;
@@ -127,8 +159,18 @@ i:hover{
   color: white;
 }
 
-.cell :hover{
-  color: gold;
+.cell > img{
+  border-width: 3px;
+  border-color: #F1F1D4;
+}
+
+img{
+  border: 3px solid #F1F1D4;
+  border-radius: 3px;
+}
+
+.cell > img :hover{
+  border-color: crimson;
 }
 
 .flex-container > div :hover{
