@@ -1,5 +1,5 @@
 /*
-* @purpose Opens a new window with a random Wikipedia article
+* @purpose opens a new window with a random Wikipedia article
 */
 function getRandom(){
   window.open("https://en.wikipedia.org/wiki/Special:Random");
@@ -13,6 +13,7 @@ function search(){
   //clear search results and get search from search bar
   $("#searchResults").html('');
   $("#searchResults").append("<hr>");
+  $("#searchResults").css("display","block");
   var searchTitle = $('<h3>Search Results</h3>');
   searchTitle.addClass("text-center");
   $("#searchResults").append(searchTitle);
@@ -62,6 +63,7 @@ function searchBar(){
 */
 function collapse(){
   $(".fa-search").show();
+  $("#searchResults").hide();
   $("input").hide();
   $(".fa-compress").hide();
   $("#searchResults").html('');
