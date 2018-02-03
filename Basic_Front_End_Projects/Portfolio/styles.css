@@ -1,6 +1,7 @@
 html, body{
   height: 100%;
   font-family: helvetica;
+  font-size: 14pt;
 }
 
 a{
@@ -59,14 +60,47 @@ h3{
   margin-bottom: 3px;
 }
 
+.content-wrapper{
+  min-height: 100vh;
+  margin-bottom: -60px;
+}
+
+#content-wrapper1{
+  padding-top: 60px;
+}
+
+#content-wrapper2{
+  min-height: 90vh;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+#content-wrapper6{
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+#float-wrapper2{
+  min-height: 300px;
+}
+
+.footer{
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.push{
+  height: 60px;
+}
+
 #section1{
   background-image: url("https://static.pexels.com/photos/220116/pexels-photo-220116.jpeg");
   background-size: cover;
   background-attachment: fixed;
 	color: white;
-	display: flex;
-	align-items: center;
-
+	text-align: center;
 }
 
 #section2{
@@ -102,19 +136,10 @@ h3{
 }
 
 #section6{
-  position: relative;
   min-height: 100%;
-  background-color: rebeccapurple;
+  background-color: #014779;
   color: white;
   text-align: center;
-  padding: 20px;
-  padding-top: 30px;
-}
-
-#sec6scroll-container{
-  position: absolute;
-  bottom: 30px;
-  right: 49%;
 }
 
 #about{
@@ -157,20 +182,22 @@ i:hover{
   padding: 5px;
   border-radius: 5px;
   color: white;
+  transition: .5s ease;
 }
 
 .cell > img{
   border-width: 3px;
   border-color: #F1F1D4;
+  transition: .5s ease;
 }
 
 img{
-  border: 3px solid #F1F1D4;
+  border: 4px solid #F1F1D4;
   border-radius: 3px;
 }
 
-.cell > img :hover{
-  border-color: crimson;
+.cell :hover{
+  border-color: #00CD66;
 }
 
 .flex-container > div :hover{
@@ -214,6 +241,11 @@ button{
 }
 
 button:hover{
-  background-color: gold;
+  background-color: #00FE00;
   cursor: pointer;
+}
+
+#contact-message{
+  padding: 28px;
+  text-align: justify;
 }
