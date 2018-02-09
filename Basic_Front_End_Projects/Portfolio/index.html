@@ -14,6 +14,7 @@
         <div id="navbar">
           <span id="about">About Me</span><span id="projects">Projects</span><span id="contact">Contact</span>
         </div>
+          <div id="box" style="">
 			     <h3>Welcome to</h3>
            <h1>Christian Wadsworth's</h1>
            <h3 style="margin-top: 6px;">portfolio page</h3>
@@ -31,9 +32,10 @@
                <i class="fa fa-free-code-camp fa-3x" style="margin: 3px; margin-top: 0px;"></i>
              </a>
            </div>
+         </div>
            <div class="push">
            </div>
-		  </div>
+		    </div>
       <div class="footer">
         <i class="fa fa-angle-down fa-3x" aria-hidden="true" id="sec1scroll"></i>
       </div>
@@ -54,7 +56,7 @@
               I have picked up some useful skills along the way, such as html, css, js,
               jquery, and bootstrap. This experience moved me to minor in computer science
               in my last semester at Lehigh, where I will be learning about databases, software engineering, AI, and web
-              programming (Node and Cordova / Electron). I am looking forward to creating and learning more about
+              programming. I am looking forward to creating and learning more about
               software in the future.
             </p></br>
             <p>
@@ -69,7 +71,7 @@
       <i class="fa fa-angle-down fa-3x" aria-hidden="true" id="sec2scroll"></i>
     </div>
   </div>
-  <div id="section3" class="fullpage">
+  <div id="section3">
   </div>
   <div id="section4">
     <h2>Front-End Development Projects</h2>
@@ -78,43 +80,37 @@
       <div class="cell">
         <h3>Weather App</h3>
         <a href="https://codepen.io/cwads33/full/NwrxEo">
-        <img src="https://dl.dropboxusercontent.com/s/8b9n9h7t5lebbh4/Screenshot%202018-01-31%2002.35.23.png?dl=0"
-        width="350px"></a>
+        <img src="https://dl.dropboxusercontent.com/s/8b9n9h7t5lebbh4/Screenshot%202018-01-31%2002.35.23.png?dl=0" class="cell-img"></a>
       </div>
 
       <div class="cell">
         <h3>Random Quotes</h3>
         <a href="https://codepen.io/cwads33/full/QOOLjW">
-        <img src="https://dl.dropboxusercontent.com/s/ww9qod0713iurp4/Screenshot%202018-01-31%2002.37.53.png?dl=0"
-        width="350px"></a>
+        <img src="https://dl.dropboxusercontent.com/s/ww9qod0713iurp4/Screenshot%202018-01-31%2002.37.53.png?dl=0" class="cell-img"></a>
       </div>
 
       <div class="cell">
         <h3>Pomodoro Clock</h3>
         <a href="https://codepen.io/cwads33/full/VyvVjX">
-        <img src="https://dl.dropboxusercontent.com/s/tb3kncr532ux1qv/Screenshot%202018-01-31%2002.38.57.png?dl=0"
-        width="350px"></a>
+        <img src="https://dl.dropboxusercontent.com/s/tb3kncr532ux1qv/Screenshot%202018-01-31%2002.38.57.png?dl=0" class="cell-img"></a>
       </div>
 
       <div class="cell">
         <h3>Tic-Tac-Toe</h3>
         <a href="https://codepen.io/cwads33/full/xpPORZ">
-        <img src="https://dl.dropboxusercontent.com/s/9abd9ke0j1qes3f/Screenshot%202018-01-31%2002.39.12.png?dl=0"
-        width="350px"></a>
+        <img src="https://dl.dropboxusercontent.com/s/9abd9ke0j1qes3f/Screenshot%202018-01-31%2002.39.12.png?dl=0" class="cell-img"></a>
       </div>
 
       <div class="cell">
         <h3>Wikipedia Viewer</h3>
           <a href="https://codepen.io/cwads33/full/JOMpdb">
-        <img src="https://dl.dropboxusercontent.com/s/og9n3cf436n6j28/Screenshot%202018-01-31%2022.18.29.png?dl=0"
-        width="350px"></a>
+        <img src="https://dl.dropboxusercontent.com/s/og9n3cf436n6j28/Screenshot%202018-01-31%2022.18.29.png?dl=0" class="cell-img"></a>
       </div>
 
       <div class="cell">
         <h3>Calculator</h3>
         <a href="https://codepen.io/cwads33/full/OzbRPZ">
-        <img src="https://www.dl.dropboxusercontent.com/s/pubkvq4muqa52q6/Screenshot%202018-01-31%2023.22.08.png?dl=0"
-        width="350px"></a>
+        <img src="https://www.dl.dropboxusercontent.com/s/pubkvq4muqa52q6/Screenshot%202018-01-31%2023.22.08.png?dl=0" class="cell-img"></a>
       </div>
     </div>
     <div style="margin-top: 30px;">
@@ -122,38 +118,39 @@
     </div>
   </div>
   <div id="section5">
-
   </div>
   <div id="section6">
-    <div class="content-wrapper" id="content-wrapper6">
+    <div id="content-wrapper6">
       <h2>Contact Me</h2>
       <div id="contact-message">
-      Reach out if you'd like to get in touch! I am looking for employment starting
-      summer 2018. I am also open to working on other projects. If you're in the
-      Bethlehem area and want a coding buddy I'm down for that too! Currently this
-      form is not connected to a form validation service. Until I connect it,
-      my email is cjw218@lehigh.edu. I can also be reached by LinkedIn.
+      Reach out if you'd like to get in touch! I am looking for an entry level developer
+      job starting summer 2018. I am also open to working on other projects. If you're in the
+      Bethlehem area and want a coding buddy I'm down for that too! This form uses
+      formspree.io to handle form submissions.
     </div>
-      <form>
+      <form action="https://formspree.io/cwadsrun33@gmail.com" method="post">
         <div>
-          <input type="text" placeholder="Name">
+          <input type="text" placeholder="Name" name="name">
         </div>
         <div>
-          <input type="text" placeholder="Email">
+          <input type="text" placeholder="Email" name="_replyto">
       </div>
       <div>
         <textarea placeholder="Message"></textarea>
       </div>
       <div>
-        <button>Submit</button>
+        <input type="submit" value="Send" id="button">
       </div>
       </form>
-      <div class="push">
+      <div class="push" style="height: 80px; padding-bottom: 30px;">
       </div>
     </div>
-    <div class="footer">
+    <div class="footer" style="height: 80px;">
       <i class="fa fa-angle-double-up fa-3x" aria-hidden="true" id="sec6scroll"></i>
     </div>
+  </div>
+  <div id="page-footer">
+    Coded by Christian Wadsworth
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="script.js"></script>
