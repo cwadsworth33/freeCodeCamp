@@ -101,7 +101,7 @@ h3{
 }
 
 #section1{
-  background-image: url("https://static.pexels.com/photos/220116/pexels-photo-220116.jpeg");
+  background-image: url("Images/wood.jpeg");
   background-size: cover;
   background-attachment: fixed;
 	color: white;
@@ -119,7 +119,7 @@ h3{
 
 
 #section3{
-  background-image: url("https://dl.dropboxusercontent.com/s/wcc8lo7kbcdvsr9/coffee_desk.jpg?dl=0");
+  background-image: url("Images/coffee_desk.jpg");
   background-size: cover;
   background-attachment: fixed;
   height: 75%;
@@ -260,7 +260,7 @@ textarea{
 
 #page-footer{
   background-color: #36454f;
-  height: 60px;
+  //height: 60px;
   padding: 20px;
   border: 1px solid black;
   text-align: center;
