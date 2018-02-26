@@ -1,0 +1,150 @@
+body{
+  background-color: #444;
+  background-image: url("https://static.pexels.com/photos/301717/pexels-photo-301717.jpeg");
+}
+
+#strict-mode{
+  display: none;
+}
+
+#new-game-question:hover{
+  color: gold;
+  cursor: pointer;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.pointer:hover{
+  cursor: pointer;
+}
+
+#reset{
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+}
+
+p span {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#reset :hover{
+  color: gold;
+  cursor: pointer;
+}
+
+#new-game:hover{
+  color: gold;
+  cursor: pointer;
+}
+
+p span:hover{
+  color: gold;
+  cursor: pointer;
+}
+
+#landing-page{
+  position: absolute;
+  color: white;
+  text-align: center;
+  z-index: 20;
+  background-color: black;
+  height: 400px;
+  width: 400px;
+  opacity: .7;
+  transform: translate(0px, 0px);
+}
+
+#landing-page-txt{
+  position: absolute;
+  color: white;
+  text-align: center;
+  z-index: 30;
+  background-color: #555;
+  height: 200px;
+  width: 300px;
+  transform: translate(47.5px, 97.5px);
+  border-radius: 7px;
+  border: 5px solid black;
+}
+
+h1{
+  text-align: center;
+  margin-top: 30px;
+}
+
+i{
+  text-align: center;
+}
+
+#container{
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  background-color: red;
+  border-radius: 100%;
+  overflow: hidden;
+  border: 20px solid black;
+  margin-top: 40px;
+}
+
+#center{
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: 20px solid black;
+  position: absolute;
+  background-color: #333;
+  z-index: 10;
+  transform: translate(80px, 80px);
+  color: white;
+}
+
+#level{
+  text-align: center;
+}
+
+.row{
+  height: 50%;
+  width: 412px;
+}
+
+.button{
+  position: absolute;
+  width: 205px;
+  height: 205px;
+  border: 20px solid black;
+}
+
+#b1{
+  background-color: blue;
+  transform: translate(185px, 185px);
+
+}
+
+#b2{
+  background-color: red;
+  transform: translate(185px, -35px);
+}
+
+#b3{
+  background-color: yellow;
+  transform: translate(-35px, 185px);
+
+}
+
+#b4{
+  background-color: green;
+  transform: translate(-35px, -35px);
+}
+
+button{
+  padding: 5px;
+  border-radius: 5px;
+  background-color: inherit;
+  color: white;
+}
